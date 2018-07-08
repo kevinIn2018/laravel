@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+class user {
+    public $age = "";
+    public $name  = "";
+}
+
+Route::get('/test', function () {
+    $user = new user();
+    $user->age=20;
+    $user->name="Kevin";
+
+    return json_encode($user);
+});
